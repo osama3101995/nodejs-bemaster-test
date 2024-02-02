@@ -1,0 +1,55 @@
+//////////////////////////////////FORTH TASK//////////////////////////////////
+
+  CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    -- Other user-related columns
+  );
+  
+  CREATE TABLE authors (
+    author_id INT PRIMARY KEY,
+    user_id INT UNIQUE,
+    author_name VARCHAR(255) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+  );
+
+  CREATE TABLE collaborators (
+    collaborator_id INT PRIMARY KEY,
+    user_id INT UNIQUE,
+    collaborator_name VARCHAR(255) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+  );
+  
+
+  
+  CREATE TABLE videos (
+    video_id INT PRIMARY KEY,
+    author_id INT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    -- Other video-related columns
+    FOREIGN KEY (author_id) REFERENCES authors(author_id)
+  );
+  
+
+  
+  CREATE TABLE comments (
+    comment_id INT PRIMARY KEY,
+    user_id INT,
+    video_id INT,
+    comment_text TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (video_id) REFERENCES videos(video_id)
+  );
+  
+
+  CREATE TABLE reviews (
+    review_id INT PRIMARY KEY,
+    user_id INT,
+    video_id INT,
+    rating INT CHECK (rating >= 1 AND rating <= 5),
+    review_text TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (video_id) REFERENCES videos(video_id)
+  );

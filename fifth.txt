@@ -1,0 +1,35 @@
+    Language: Node.js
+    Framework: Express.js
+    Database: PostgreSQL (Relational)
+    Authentication: JWT
+    Containerization: Docker
+    Orchestration: Kubernetes
+    Message Broker: RabbitMQ
+    Caching: Redis
+    Testing: Jest
+    Logging/Monitoring: ELK Stack
+
+File Organization:
+
+    Module Structure: MVC
+    Separation of Concerns: Clearly defined layers
+    Middleware: Authentication, logging
+
+Design Patterns:
+
+    Repository Pattern
+    Dependency Injection
+    Observer Pattern (Event-driven)
+    Singleton Pattern
+    Strategy Pattern
+    Factory Method / Abstract Factory
+    Facade Pattern
+
+Additional Considerations:
+
+    Scalability: Load balancing, horizontal scaling
+    Security: Input validation, HTTPS
+    Error Handling: Meaningful messages
+    Versioning: API versioning
+    Documentation: Code/API documentation
+    Code Reviews: Maintain code quality

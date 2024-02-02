@@ -1,0 +1,84 @@
+Development Team Naming Policy Document
+Database Naming Conventions:
+
+    Database Names:
+        Use descriptive names that reflect the purpose or domain of the database.
+        Prefer lowercase with underscores to separate words (e.g., customer_data).
+
+    Table Names:
+        Singular nouns for tables (e.g., user, product).
+        Use underscores for compound words.
+
+    Column Names:
+        Descriptive and concise names.
+        Avoid abbreviations; prefer clarity over brevity.
+
+Variable Naming Conventions:
+
+    General Variables:
+        Use camelCase for variables (e.g., userName).
+        Keep variable names concise and descriptive.
+
+    Constants:
+        Uppercase with underscores for constants (e.g., MAX_RETRY_COUNT).
+
+    Boolean Variables:
+        Start with "is," "has," or a modal verb (e.g., isActive, hasPermission).
+
+Function Naming Conventions:
+
+    Function Names:
+        Use descriptive verbs and nouns.
+        Follow camelCase (e.g., calculateTotal, getUserDetails).
+
+    Accessor/Mutator Functions:
+        Follow the pattern getPropertyName and setPropertyName for accessor and mutator functions, respectively.
+
+Class Naming Conventions:
+
+    Class Names:
+        Use UpperCamelCase (e.g., UserProfile, OrderManager).
+        Prefer nouns that represent entities or objects.
+
+    Abstract Classes/Interfaces:
+        Prefix with 'Abstract' or use an 'I' prefix for interfaces (e.g., AbstractLogger, ILogger).
+
+Git Naming Conventions:
+
+    Branches:
+        Use lowercase, hyphen-separated words (e.g., feature/new-feature, bugfix/fix-issue).
+
+    Commits:
+        Begin with a succinct, present-tense verb (e.g., Add, Update, Fix).
+
+    Tags:
+        Use semantically versioned tags (e.g., v1.0.0).
+
+File Naming Conventions:
+
+    Source Code Files:
+        Descriptive and concise names.
+        Use camelCase for JavaScript/TypeScript, snake_case for Python, and PascalCase for C#.
+
+    Config Files:
+        Follow a consistent naming pattern (e.g., .env, config.json).
+
+Commenting:
+
+    Code Comments:
+        Use clear, concise comments.
+        Avoid redundant comments that merely describe what the code is doing.
+
+    Documentation:
+        Document APIs and major functions/classes using markdown or a similar standard.
+
+Miscellaneous:
+
+    Acronyms:
+        Write acronyms in uppercase (e.g., XMLParser, not XmlParser).
+
+    Consistency:
+        Maintain consistent naming patterns across the codebase.
+
+    Code Review Guidelines:
+        Reviewers should ensure that the naming conventions are followed during code reviews.
